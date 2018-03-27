@@ -1,0 +1,1231 @@
+1.1.4: Your First Karel Program
+
+move();
+move();
+move();
+move();
+takeBall();
+------------------------------------------------------------------------------------------------------------------------------------------
+1.1.5: Short Stack
+
+move();
+putBall();
+putBall();
+move();
+------------------------------------------------------------------------------------------------------------------------------------------
+1.2.4: Make a Tower
+
+move();
+putBall();
+turnLeft();
+move();
+putBall();
+move();
+putBall();
+move();
+turnLeft();
+turnLeft();
+turnLeft();
+------------------------------------------------------------------------------------------------------------------------------------------
+1.2.5: Pyramid of Karel
+
+putBall();
+move();
+putBall();
+move();
+putBall();
+turnLeft();
+move();
+putBall();
+turnLeft();
+move();
+putBall();
+turnLeft();
+turnLeft();
+turnLeft();
+move();
+turnLeft();
+turnLeft();
+turnLeft();
+move();
+putBall();
+
+------------------------------------------------------------------------------------------------------------------------------------------
+1.3.4: Tower Karel
+
+public class TowerKarel extends Karel
+{
+
+    public void run()
+    {
+    	move();
+    	putBall();
+    	turnLeft();
+    	move();
+    	putBall();
+    	
+    	move();
+    	putBall();
+    	
+    	move();
+    	turnLeft();
+    	turnLeft();
+    	turnLeft();
+    	
+    	
+    }
+    
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.3.5: Gold Medal Karel
+
+public class GoldMedalKarel extends Karel
+{
+    
+    public void run()
+    {
+        move();
+        putBall();
+        
+        move();
+        putBall();
+        
+        move();
+        putBall();
+        
+        turnLeft();
+        move();
+        
+        turnLeft();
+        move();
+        putBall();
+        
+        move();
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        
+        move();
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+    }   
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.3.6: Maze Karel
+
+// This program has Karel solve the maze and find the ball
+class MazeKarel extends Karel
+{
+    public void run()
+    {
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        move();
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+        turnLeft();
+        move();
+        turnLeft();
+        move();
+        turnLeft();
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.4.4: Slide Karel
+
+public class SlideKarel extends Karel
+{
+    public void run()
+    {
+        putBall();
+        move();
+        turnRight();
+        move();
+        putBall();
+        turnLeft();
+        move();
+        turnRight();
+        move();
+        putBall();
+        turnLeft();
+        
+    }
+    
+    private void turnRight()
+    {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.4.5: Fireman Karel
+
+public class FiremanKarel extends Karel
+{
+    public void run()
+    {
+       turnRight(); 
+       move();
+       move();
+       move();
+       turnLeft();
+    }
+    private void turnRight()
+    {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.5.4: Pancakes
+
+public class PancakeKarel extends Karel
+{
+    public void run()
+    {
+        JumpAndDrop();
+        putBall();
+        putBall();
+        move();
+        JumpAndDrop();
+        putBall();
+        putBall();
+        move();
+        JumpAndDrop();
+        putBall();
+        putBall();
+        move();
+    }
+    private void JumpAndDrop()
+    {
+        move();
+        putBall();
+        
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.5.5: Mario Karel
+
+public class MarioKarel extends Karel
+{
+    public void run()
+    {
+        collectCoins();
+        collectCoins();
+        collectCoins();
+        finishMap();
+    }
+    private void collectCoins()
+    {
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        takeBall();
+        takeBall();
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+    }
+    private void finishMap()
+    {
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        takeBall();
+        takeBall();
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        move();
+        turnLeft();
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+1.6.4: The Two Towers
+
+public class TwoTowersKarel extends Karel
+{
+
+	public void run()
+	{
+		buildTower();
+		comeBack();
+		move();
+		buildTower();
+		move();
+		faceNorthToEast();
+	}
+	
+	private void buildTower()
+	{
+	    move();
+	    putBall();
+	    turnLeft();
+	    move();
+	    putBall();
+	    move();
+	    putBall();
+	}
+	
+	private void comeBack()
+	{
+	    turnLeft();
+	    turnLeft();
+	    move();
+	    move();
+	    turnLeft();
+	}
+	private void faceNorthToEast()
+	   {
+	       turnLeft();
+	       turnLeft();
+	       turnLeft();
+	   }
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.7.4: The Two Towers + Comments
+
+// Add comments to each of your methods
+public class TwoTowersKarel extends Karel
+{
+	public void run()
+	{
+    	move();
+        buildTower();
+        comeDown();
+        move();
+        move();
+        buildTower();
+        move();
+        turnRight();
+	}
+    //This method makes Karel turn right by turning left 3 times.
+    private void turnRight()
+    {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+    //This method makes Karel turn around by turning left twice.
+    private void turnAround()
+    {
+        turnLeft();
+        turnLeft();
+    }
+    //This method makes Karel come down a tower by reverse movements of the way she came up.
+    private void comeDown()
+    {
+        turnAround();
+        move();
+        move();
+        turnLeft();
+    }
+    //This method makes Karel build a tower.
+    private void buildTower()
+    {
+        turnLeft();
+        putBall();
+        move();
+        putBall();
+        move();
+        putBall();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.8.4: The Two Towers + SuperKarel
+
+public class TwoTowersKarel extends SuperKarel
+{
+
+	public void run()
+	{
+		move();
+		turnLeft();
+		putBall();
+		move();
+		putBall();
+		move();
+		putBall();
+		turnRight();
+		turnRight();
+		move();
+		move();
+		turnLeft();
+		move();
+		move();
+		turnLeft();
+		putBall();
+		move();
+		putBall();
+		move();
+		putBall();
+		move();
+		turnRight();
+	}
+
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.9.5: Marathon Karel
+
+// This program has Karel run a marathon,
+// which consists of 26 moves
+class MarathonKarel extends SuperKarel
+{
+    public void run()
+    {
+        // Run your code here
+        for(int i = 0; i < 26;i++)
+        {
+            move();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.9.6: Take 'em All
+
+public class TakeEmAllKarel extends SuperKarel
+{
+    public void run()
+    {
+        move();
+        // your code here 
+        for(int i = 0; i < 100; i++)
+{
+    takeBall();
+}
+        move();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.9.7: Dizzy Karel
+
+public class DizzyKarel extends SuperKarel
+{
+    public void run()
+    {
+        for(int i = 0; i < 32;i++)  
+        {
+            turnLeft();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.9.8: For Loop Square
+
+public class SquareKarel extends SuperKarel
+{
+    public void run()
+    {
+        for(int i = 0; i < 4;i++)   
+        {
+            putBall();
+            move();
+            turnLeft();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.9.9: Lots of Hurdles
+
+public class HurdlesKarel extends SuperKarel
+{
+    public void run()
+    {
+        // your code here 
+        move();
+        move();
+        jumpHurdle();
+        move();
+        move();
+        jumpHurdle();
+        move();
+        move();
+        jumpHurdle();
+        move();
+        move();
+        jumpHurdle();
+        move();
+        move();
+        jumpHurdle();
+        
+    }
+    
+    private void jumpHurdle()
+    {
+        turnLeft();
+        move();
+        turnRight();
+        move();
+        turnRight();
+        move();
+        turnLeft();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.10.4: Follow The Yellow Ball Road
+
+// Follow the yellow ball road!
+// Karel moves until it's not on a tennis ball.
+public class YellowBallRoadKarel extends SuperKarel
+{
+    public void run()
+    {
+        //your code here
+        while(ballsPresent())
+        {
+            move();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.10.5: Just Keep Spinning
+
+// This program has Karel turn left one time for
+// each tennis ball that is present
+class JustKeepSpinning extends SuperKarel
+{
+    public void run()
+    {
+        // Write your code here
+        //while on a ball
+        //takeball and turn left
+        while(ballsPresent()){
+            turnLeft();
+            takeBall();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.10.6: Lay Row of Tennis Balls
+
+/* Write a program to lay a row of tennis balls
+ * across first street. Make sure to test your
+ * program on multiple worlds. */
+public class TennisBallRowKarel extends SuperKarel
+{
+    public void run()
+    {
+        // your code here 
+        //while no balls present
+        //putball
+        //move
+        while(frontIsClear()){
+            putBall();
+            move();
+        }
+        putBall();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.10.7: Big Tower
+
+/* This program draws a big tower from Karel's starting spot */
+public class BigTowerKarel extends SuperKarel
+{
+    public void run()
+    {
+        // your code here
+        //put down a ball first
+        //if facing south turn around
+        //if facing east turn left
+        //if facing west turn right
+        //if facing north then use while loop with front clear to move and put balls
+        putBall();
+        
+        if(facingSouth()){
+            turnAround();
+        }
+        if(facingWest()){
+            turnRight();
+        }
+        if(facingEast()){
+            turnLeft();
+        }
+        if(facingNorth()){
+            while(frontIsClear()){
+                move();
+                putBall();
+            }
+            
+        
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.11.5: Is There a Ball?
+
+// Karel should put a ball on the first spot
+// if there isn't one already there and then move.
+public class IsThereABallKarel extends SuperKarel
+{
+    public void run()
+    {
+        if(ballsPresent())
+        {
+            move();
+        }
+        else
+        {
+            putBall();
+            move();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.12.4: Right Side Up
+
+public class RightSideUp extends SuperKarel
+{
+    public void run()
+    {
+        // your code here
+        if(facingSouth())
+        {
+            turnLeft();
+        }
+        else
+        {
+            turnAround();
+        }
+    }
+    
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.13.4: Random Hurdles
+
+public class RandomHurdles extends SuperKarel
+{
+    public void run()
+    {
+        //your code here
+        //if blocked jump hurdle
+        //ir clear move
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        jumpHurdle();
+        private void jumpHurdle()
+        {
+            turnLeft();
+            move();
+            turnRight();
+            move();
+            turnRight();
+            move();
+            turnLeft();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.15.4: Diagonal
+
+/* This program has karel lay a diagonal row of tennis balls. 
+ * However, the indenting is all wrong. Can you properly 
+ * indent this program? */
+public class Diagonal extends SuperKarel
+{
+public void run(){
+while(frontIsClear())
+{
+putBall();
+move();
+turnLeft();
+move();
+for(int i = 0; i < 3; i++)
+{
+turnLeft();
+}
+}
+putBall();
+}
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.15.5: Staircase
+
+public class Staircase extends SuperKarel
+{    
+public void run(){
+putBall();
+while(frontIsClear())
+{
+turnLeft();
+while (ballsPresent()) 
+{
+move();
+}
+
+turnRight();
+move();
+createStep();
+}
+}
+
+private void createStep()
+{
+turnRight();
+putBall();
+while (frontIsClear())
+{
+move();
+putBall();
+}
+turnLeft();
+}
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.16.1: Fetch
+
+public class FetchKarel extends SuperKarel
+{
+    public void run()
+    {
+        move();
+        turnLeft();
+        move();
+        move();
+        move()
+        move();
+        turnRight();
+        move();
+        takeBall();
+        turnAround();
+        move();
+        move()
+        turnLeft();
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        putBall();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.16.2: Racing Karel
+
+public class RacingKarel extends SuperKarel
+{
+    public void run()
+    {
+        placeEightBalls();
+        //move to ends
+        while(frontIsClear())
+        {
+            move();
+        }
+        //turn left
+        while(frontIsBlocked())
+        {
+            turnLeft();
+        }
+        placeEightBalls();
+        while(frontIsClear())
+        {
+            move();
+        }
+        placeEightBalls();
+        while(frontIsBlocked())
+        {
+            turnLeft();
+        }
+         while(frontIsClear())
+        {
+            move();
+        }
+        placeEightBalls();
+        while(frontIsBlocked())
+        {
+            turnLeft();
+        }
+        while(frontIsClear())
+        {
+            move();
+        }
+        while(frontIsBlocked())
+        {
+            turnLeft();
+        }
+    }
+    private void placeEightBalls()
+    {
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+        putBall();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.16.3: Tower Builder
+
+public class TowerBuilderKarel extends SuperKarel
+{
+    public void run()
+    {
+        //build tower
+        //buildTower();
+        //move
+        //move();
+        //move again
+        //move();
+        //build a second tower
+        //buildTower();
+        //move
+        //move();
+        //move again
+        //move();
+        //build a third tower
+        //buildTower();
+        //make a sensor for building the towers
+        //^ basically, make a sensor that scans the map for which one it is
+        //STARTING SENSOR
+        while(frontIsClear())
+        {
+            buildTower();
+            move();
+            if(frontIsClear())
+            {
+                move();
+            }
+        }
+        //make sensor for seeing if there is a tower behind you-
+        //and see if a tower needs to be built or not
+        if(frontIsBlocked())
+        {
+            turnAround();
+            if(frontIsBlocked())
+            {
+                turnAround();
+                buildTower();
+            }
+            else
+            {
+                move();
+                if(ballsPresent())
+                {
+                    turnAround();
+                    move();
+                }
+                else
+                {
+                    move();
+                        if(ballsPresent())
+                    {
+                        turnAround();
+                        move();
+                        if(frontIsClear())
+                            {
+                                move();
+                                buildTower();
+                            }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    private void buildTower()
+    {
+        turnLeft();
+        putBall();
+        move();
+        putBall();
+        move();
+        putBall();
+        turnAround();
+        move();
+        move();
+        turnLeft();
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.16.4: Super Cleanup Karel
+
+public class SuperCleanupKarel extends SuperKarel
+{
+    public void run()
+    {
+        if(frontIsClear())
+        {
+            while(frontIsClear())
+            {
+                move();
+                if(ballsPresent())
+                {
+                    takeBall();
+                }
+                if(frontIsBlocked())
+                {
+                    if(facingEast())
+                    {
+                        turnLeft();
+                        if(frontIsClear())
+                        {
+                            move();
+                            if(ballsPresent())
+                                {
+                                    takeBall();
+                                }
+                            turnLeft();
+                        }
+                        else
+                        {
+                            turnLeft();
+                            while(frontIsClear())
+                            {
+                                move();
+                            }
+                        }
+                    }
+            
+                }
+                if(frontIsBlocked())
+                {
+                    if(facingWest())
+                    {
+                        turnRight();
+                        if(frontIsClear())
+                        {
+                            move();
+                            turnRight();
+                        }
+                        if(frontIsBlocked())
+                        {
+                            turnAround();
+                            if(ballsPresent())
+                                {
+                                    takeBall();
+                                }
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            turnLeft();
+            takeBall();
+            move();
+            move();
+            move();
+            takeBall();
+            move();
+            takeBall();
+            move();
+            move();
+            move();
+            takeBall();
+            turnAround();
+            move();
+            move();
+            move();
+            move();
+            move();
+            move();
+            move();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.16.5: Double Tennis Balls
+
+public class DoubleTennisBallsKarel extends SuperKarel
+{
+    public void run()
+    {
+        move();
+        count();
+    }
+    private void count()
+    {
+        if(ballsPresent())
+        {
+            takeBall();
+            takeBall();
+            takeBall();
+            takeBall();
+            takeBall();
+            takeBall();
+            takeBall();
+            if(ballsPresent())
+            {
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                takeBall();
+                if(noBallsPresent())
+                {
+                    for(int i = 0; i < 42; i++)
+                    {
+                        putBall();
+                    }
+                    turnAround();
+                    move();
+                    turnAround();
+                }
+            }
+            else
+            {
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                putBall();
+                turnAround();
+                move();
+                turnAround();
+            }
+        }
+        else
+        {
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            putBall();
+            turnAround();
+            move();
+            turnAround();
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------
+1.16.6: Midpoint Karel
+
+public class MidpointKarel extends SuperKarel
+{
+    public void run()
+    {
+        midpoint1();
+        if(noBallsPresent())
+        {
+            midpoint5();
+            if(noBallsPresent())
+            {
+                midpoint7();
+                if(noBallsPresent())
+                {
+                    midpoint8();
+                    if(noBallsPresent())
+                    {
+                        midpoint15();
+                    }
+                }
+            }
+        }
+    }
+    private void midpoint1()
+    {
+        if(frontIsBlocked())
+        {
+            putBall();
+        }
+    }
+    private void midpoint5()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            move();
+        }
+        if(frontIsBlocked())
+        {
+            turnAround();
+            for(int i = 0; i < 2; i++)
+            {
+                move();
+            }   
+            turnAround();
+            putBall();
+        }
+        else
+        {
+            turnAround();
+            for(int i = 0; i < 4; i++)
+            {
+                move();
+            }
+            turnAround();
+        }
+    }
+    private void midpoint7()
+    {
+        for(int i = 0; i < 6; i++)
+        {
+            move();
+        }
+        if(frontIsBlocked())
+        {
+            turnAround();
+            for(int i = 0; i < 3; i++)
+            {
+                move();
+            }
+            turnAround();
+            putBall();
+        }
+        else
+        {
+            turnAround();
+            for(int i = 0; i < 6; i++)
+            {
+                move();
+            }
+            turnAround();
+        }
+    }
+    private void midpoint8()
+    {
+        for(int i = 0; i < 7; i++)
+        {
+            move();
+        }
+        if(frontIsBlocked())
+        {
+            turnAround();
+            for(int i = 0; i < 4; i++)
+            {
+                move();
+            }
+            turnAround();
+            putBall();
+        }
+        else
+        {
+            turnAround();
+            for(int i = 0; i < 7; i++)
+            {
+                move();
+            }
+            turnAround();
+        }
+    }
+    private void midpoint15()
+    {
+        for(int i = 0; i < 14; i++)
+        {
+            move();
+        }
+        if(frontIsBlocked())
+        {
+            turnAround();
+            for(int i = 0; i < 7; i++)
+            {
+                move();
+            }
+            turnAround();
+            putBall();
+        }
+        else
+        {
+            turnAround();
+            for(int i = 0; i < 14; i++)
+            {
+                move();
+            }
+            turnAround();
+        }
+    }
+}
