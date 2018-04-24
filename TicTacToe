@@ -1,0 +1,21 @@
+This file will do an overview of the Tic Tac Toe assignment. Cough free answers.
+
+Your Grid:
+
+var WIDTH = 400;
+var HEIGHT = 400;
+setSize(WIDTH, HEIGHT);
+
+var WINNING_LINE_WIDTH = 10;
+var WINNING_LINE_COLOR = Color.red;
+
+function start(){
+	var line1 = new Line(133.333333333, 400, 133.333333333, 0);
+	var line2 = new Line(266.666666666, 400, 266.666666666, 0);
+	var line3 = new Line(400, 133.333333333, 0, 133.333333333);
+	var line4 = new Line(400, 266.666666666, 0, 266.666666666);
+	add(line1);
+	add(line2);
+	add(line3);
+	add(line4);
+}
