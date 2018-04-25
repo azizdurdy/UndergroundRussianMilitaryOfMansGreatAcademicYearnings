@@ -1,4 +1,4 @@
-This file will do an overview of the Tic Tac Toe assignment. Cough free answers.
+This file will do an overview of the Tic Tac Toe assignment. Cough free answers. For CodeHS ofc
 
 //These values provide a foundation for the Tic-Tac-Toe game.
 var WIDTH = 400;
